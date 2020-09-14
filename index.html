@@ -9,14 +9,15 @@
     <!-- Husk en beskrivelse af siden i content-->
     <meta name="description" content="">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onhashchange="pageChange()">
     <header>
         <img id="logo" src="img/logo-gron.png" alt="logo">
         <nav class="navigation">
             <hr>
-            <a href="#favoritter"><img src="img/favorit.png" alt="favorit"></a>
+            <a href="#plants"><img src="img/favorit.png" alt="favorit"></a>
             <a href="#swipe"><img src="img/swipe.png" alt="swipe"></a>
             <a href="#profil"><img src="img/profil.png" alt="profil"></a>
             <a href="#hjaelp"><img src="img/hjaelp.png" alt="hjælp"></a>
@@ -24,9 +25,22 @@
     </header>
 
     <main>
+        <!-- SIDER -->
+
+        <!-- SWIPE-SIDE -->
+        <section id="plants" class="page">
+            <section id="plants-container"></section>
+        </section>
+
+        <!-- FAVORIT-SIDE -->
+        <section id="swipe" class="page">
+            <section id="swipe-container"></section>
+        </section>
+
+
 
         <!-- PLANTERNE -->
-        <section id="#indeplante" id="#stor" id="#">
+        <!-- <section>
             <h2>Monstera</h2>
             <img src="img/monstera.png" alt="monstera">
             <img src="img/monstera-1.jpg" alt="monstera">
@@ -61,12 +75,15 @@
             <img src="img/strelitzia-1.jpg" alt="Strelitzia">
             <img src="img/strelitzia-2.jpg" alt="Strelitzia">
         </section>
+    -->
+
 
 
     </main>
 
     <footer></footer>
     <script src="js/main.js"></script>
+    <script src="js/spa.js"></script>
 </body>
 
 </html>
