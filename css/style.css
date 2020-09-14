@@ -5,6 +5,30 @@ body {
     box-sizing: border-box;
 }
 
+/* NAVIGATION */
+/* ---------- tabbar styling ---------- */
+.navigation {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    text-align: center;
+}
+
+.navigation img {
+    width: 35px;
+    padding: 10px 20px;
+}
+
+/* logo */
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 10px;
+}
 
 
 
