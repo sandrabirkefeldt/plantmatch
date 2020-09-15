@@ -24,8 +24,8 @@ function appendPlants(plants) {
       <h2>${plant.title.rendered}</h2>
       <div class="slideshow-container">
         <img src="${plant.acf.image_1.url}" style="width=100%">
-        <img src = "${plant.acf.image_2.url}" style = "width=100%">
-        <img src = "${plant.acf.image_3.url}" style = "width=100%" >
+        <!-- <img src = "${plant.acf.image_2.url}" style = "width=100%">
+        <img src = "${plant.acf.image_3.url}" style = "width=100%" > -->
   </div>
   </article>
     `;
