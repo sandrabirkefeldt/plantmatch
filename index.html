@@ -14,23 +14,34 @@
 </head>
 
 <body onhashchange="pageChange()">
-    <header>
-        <img id="logo" src="img/logo-gron.png" alt="logo">
-        <nav class="navigation">
-            <hr>
-            <a href="#favoritter"><img src="img/favorit.png" alt="favorit"></a>
-            <a href="#plants"><img src="img/swipe.png" alt="swipe"></a>
-            <a href="#profil"><img src="img/profil.png" alt="profil"></a>
-            <a href="#hjaelp"><img src="img/hjaelp.png" alt="hjælp"></a>
-        </nav>
-    </header>
+
+    <nav class="navigation">
+        <hr>
+        <a href="#favoritter"><img src="img/favorit.png" alt="favorit"></a>
+        <a href="#plants"><img src="img/swipe.png" alt="swipe"></a>
+        <a href="#profil"><img src="img/profil.png" alt="profil"></a>
+        <a href="#hjaelp"><img src="img/hjaelp.png" alt="hjælp"></a>
+    </nav>
 
     <main>
         <!-- SIDER -->
 
         <!-- SWIPE-SIDE -->
         <section id="plants" class="page">
+            <img id="logo" src="img/logo-gron.png" alt="logo">
             <div id="board"></div>
+        </section>
+
+        <!-- FAVORIT SIDE -->
+        <section id="favoritter" class="page">
+            <header>
+                <h2 style="text-align: center;">Mine favoritter</h2>
+                <div class="favorit-container"></div>
+            </header>
+        </section>
+
+        <!-- PROFIL SIDE -->
+        <section id="profil" class="page">
 
 
         </section>
