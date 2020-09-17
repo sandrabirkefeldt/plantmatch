@@ -91,17 +91,18 @@ function showFavorit(id) {
   
     <div class="mini-info">
       <div class="mini-info-p">
-    <p>Størrelse: ${plant.acf.storrelse}</p>
-    <p>Familie: ${plant.acf.familie}</p>
-    <p>Oprindelse: ${plant.acf.oprindelse}</p>
+    <p><b>Størrelse:</b> ${plant.acf.storrelse}</p>
+    <p><b>Familie:</b> ${plant.acf.familie}</p>
+    <p><b>Oprindelse:</b> ${plant.acf.oprindelse}</p>
 </div>
     <img src="${plant.acf.image_1.url}">
 </div>
     </header>
     <div class="plante-container">
-      <h3>Overblik</h3>
+      <h3 style="margin: 10px;">Overblik</h3>
       <img src="${plant.acf.kort_info_image.url}">
     <p>${plant.content.rendered}</p>
+    <h2>Inspiration til hjemmet</h2>
     <img src="${plant.acf.image_2.url}">
     <img src="${plant.acf.image_3.url}">
     </div>

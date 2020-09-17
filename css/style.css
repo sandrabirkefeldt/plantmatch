@@ -5,17 +5,20 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    margin-bottom: 20%;
 }
 
+h1,
 h2,
 h3 {
-    font-family: 'Roboto',
+    font-family: 'Raleway',
         sans-serif;
 }
 
 p,
 ul {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans',
+        sans-serif;
 }
 
 /* NAVIGATION */
@@ -133,7 +136,7 @@ button {
     z-index: -9999;
     top: 0;
     right: 0;
-    width: 90%;
+    width: 95%;
 }
 
 .topbar-top {
@@ -160,24 +163,27 @@ button {
 }
 
 .mini-info img {
-    width: 50%;
+    width: 60%;
     margin-right: 10px;
 }
 
 .plante-container img {
     width: 90%;
+    left: 0;
 
 }
 
 .plante-container ul,
 h2 {
-    width: 70%;
     margin: 10px;
 }
 
 .plante-container p {
-    margin-left: 10px;
-    width: 80%;
+    margin: 0 10px;
+}
+
+.plante-container {
+    width: 100%;
 }
 
 
