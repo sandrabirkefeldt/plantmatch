@@ -34,7 +34,7 @@ function appendPlants(plants) {
   carousel.handle();
 }
 
-// Giver den liket plante et ID
+// Giver den liket plante et ID. Eks. ID 76, 79, 73...
 window.like = function like(id) {
   console.log("like, post id " + id);
   favoritter.push(id);
@@ -47,23 +47,38 @@ window.dislike = function dislike(id) {
   console.log("dislike, post id " + id);
 }
 
-// FAVORIT SIDEN
+// FAVORIT SIDEN - Alle ens favoritter samlet
 // Henter ID'et fra den liket plante og kalder på funktionen forneden
 function FindFavorit(id) {
-for (const plant of _plants) {
-  if (plant.id == id) {
-    appendFavorit(plant)
-    console.log(plant);
+  for (const plant of _plants) {
+    if (plant.id == id) {
+      appendFavorit(plant)
+      console.log(plant);
+    }
   }
 }
-}
-// Appender den enkelte plante og tilføjer den til favoritsiden med innerHTML
+// Henter den enkelte plante og tilføjer den til favoritsiden med innerHTML
 function appendFavorit(favorit) {
   let favoritTemplate = /*html*/ `
-      <article>
+      <article onclick="showFavorit('${favorit.title.rendered}')">
         <img src="${favorit.acf.image_1.url}">
         <h2>${favorit.title.rendered}</h2>
       </article>
     `;
   document.querySelector('.favorit-container').innerHTML += favoritTemplate;
 }
+
+function showFavorit(title) {
+  let template = /*html*/ `
+  <header class="topbar">
+    <h2>${title}</h2>
+    <div class="plante-container"></div>
+    <a href="#favoritter" class="fa" style="font-size: 50px; color: black; text-decoration: none; padding-left: 10px;">&#xf104;</a>
+    <img id="logo" style="width: 80px;" src="img/logo-hvid.png" alt="Logo i hvid">
+    </header>
+  `;
+  document.querySelector('.informationsside').innerHTML = template;
+  navigateTo("plant-information");
+}
+
+// Oplysningsside for hver plante - Her kan man læse om den enkelte liket plante
