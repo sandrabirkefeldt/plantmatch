@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slideshow.css">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -17,7 +18,7 @@
 
 <body onhashchange="pageChange()">
 
-    <nav class="navigation">
+    <nav id="tabbar" class="navigation">
         <hr>
         <a href="#favoritter"><img src="img/favorit.png" alt="favorit"></a>
         <a href="#plants"><img src="img/swipe.png" alt="swipe"></a>
@@ -44,32 +45,27 @@
         <section id="favoritter" class="page">
             <header>
                 <h2 style="text-align: center;">Mine favoritter</h2>
-                <div class="favorit-container"></div>
             </header>
+            <div class="favorit-container"></div>
         </section>
-
-        <section id="profil" class="page">
-
-        </section>
-
-        <section id="plant-information" class="page">
-            <div class="informationsside"></div>
-        </section>
+        <!-- INFORMATIONSSIDE FOR HVER ENKELT PLANTE -->
+        <section id="plant-information" class="page"></section>
 
         <!-- PROFIL SIDE -->
-        <section id="profile" class="page">
-            <header class="topbar">
-              <h2>Profile</h2>
-              <a class="right" href="#" onclick="logout()">Logout</a>
-            </header>
+        <section id="profil" class="page">
+            <h2>Profile</h2>
             <div id="user-data"></div>
-          </section>
+            <div class="profil-knapper">
+                <a href="#favoritter">Favoritter</a>
+                <a href="#hjaelp">Hjælp</a>
+                <a href="#brugerbetingelser">Brugerbetingelser</a>
+                <a href="#indstillinger">Indstillinger </a>
+            </div>
+            <a class="right" href="#" onclick="logout()">Log out</a>
+        </section>
 
         <!-- LOGIN SIDE -->
         <section id="login" class="page">
-            <header class="topbar">
-                <h2>Login</h2>
-            </header>
             <!-- firebase auth container  -->
             <section id="firebaseui-auth-container"></section>
         </section>
@@ -77,10 +73,12 @@
 
     </main>
 
-    <!-- Firebase App (the core Firebase SDK)-->
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
-    <script src="/__/firebase/7.20.-/firebase-auth.js"></script>
-    <script src="/__/firebase/7.20.-/firebase-firestore.js"></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="js/main.js" type="module"></script>
