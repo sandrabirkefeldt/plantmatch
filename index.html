@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/slideshow.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body onhashchange="pageChange()">
@@ -56,10 +57,13 @@
         </section>
 
         <!-- PROFIL SIDE -->
-        <section id="profil" class="page">
-
-
-        </section>
+        <section id="profile" class="page">
+            <header class="topbar">
+              <h2>Profile</h2>
+              <a class="right" href="#" onclick="logout()">Logout</a>
+            </header>
+            <div id="user-data"></div>
+          </section>
 
         <!-- LOGIN SIDE -->
         <section id="login" class="page">
@@ -73,7 +77,10 @@
 
     </main>
 
-
+    <!-- Firebase App (the core Firebase SDK)-->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.20.-/firebase-auth.js"></script>
+    <script src="/__/firebase/7.20.-/firebase-firestore.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="js/main.js" type="module"></script>

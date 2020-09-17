@@ -133,3 +133,25 @@ button {
 }
 
 .plante-container {}
+
+
+/* Authentication styling*/
+#firebaseui-auth-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .firebaseui-container {
+    font-family: var(--font-family);
+    font: 16px var(--font-family);
+  }
+  
+  .firebaseui-title {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
