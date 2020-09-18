@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- HUSK UNIK TITLE TIL ALLE SIDER -->
-    <title></title>
+    <title>Plant Match</title>
     <!-- Husk en beskrivelse af siden i content-->
-    <meta name="description" content="">
+    <meta name="description" content="Mangler du også inspiration til din næste plante? Så download Plant Match.">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slideshow.css">
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500&display=swap"
         rel="stylesheet">
@@ -49,29 +48,31 @@
             </header>
             <div class="favorit-container"></div>
         </section>
+
         <!-- INFORMATIONSSIDE FOR HVER ENKELT PLANTE -->
         <section id="plant-information" class="page"></section>
 
         <!-- PROFIL SIDE -->
         <section id="profil" class="page">
-            <h2>Profile</h2>
             <div id="user-data"></div>
             <div class="profil-knapper">
                 <a href="#favoritter">Favoritter</a>
                 <a href="#hjaelp">Hjælp</a>
                 <a href="#brugerbetingelser">Brugerbetingelser</a>
                 <a href="#indstillinger">Indstillinger </a>
+                <br>
+                <a href="#" style="background-color: #6E806F; text-align: center;" onclick="logout()">Log
+                    ud</a>
             </div>
-            <a class="right" href="#" onclick="logout()">Log out</a>
         </section>
 
         <!-- LOGIN SIDE -->
         <section id="login" class="page">
+            <img style="top=0;" id="logo" src="img/logo-gron.png" alt="logo">
             <!-- firebase auth container  -->
-            <section id="firebaseui-auth-container"></section>
+            <section id="firebaseui-auth-container">
+            </section>
         </section>
-
-
     </main>
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -83,6 +84,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="js/main.js" type="module"></script>
+    <script src="js/firebase.js"></script>
     <script src="js/spa.js"></script>
 </body>
 

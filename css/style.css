@@ -16,7 +16,8 @@ h3 {
 }
 
 p,
-ul {
+ul,
+a {
     font-family: 'Open Sans',
         sans-serif;
 }
@@ -32,7 +33,7 @@ ul {
     z-index: 9999;
     text-align: center;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
 }
 
 .navigation img {
@@ -73,14 +74,6 @@ ul {
 }
 
 /* slide show */
-[data-component="slideshow"] .slide {
-    display: none;
-}
-
-[data-component="slideshow"] .slide.active {
-    display: block;
-}
-
 .card img {
     width: 70%;
     display: block;
@@ -108,7 +101,7 @@ button {
 
 /* Mine favoritter side */
 .favorit-container img {
-    width: 80%;
+    width: 100%;
 }
 
 .favorit-container h2 {
@@ -136,7 +129,7 @@ button {
     z-index: -9999;
     top: 0;
     right: 0;
-    width: 95%;
+    width: 100%;
 }
 
 .topbar-top {
@@ -168,13 +161,14 @@ button {
 }
 
 .plante-container img {
-    width: 90%;
+    width: 100%;
     left: 0;
 
 }
 
 .plante-container ul,
-h2 {
+h2,
+h3 {
     margin: 10px;
 }
 
@@ -195,23 +189,15 @@ h2 {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    border-radius: 10%;
+    border-radius: 5%;
+
 }
 
-.logout a {
-    background-color: #e1edd4;
-    color: white;
-    padding: 14px 25px;
-    margin: 10px;
-    font-family: Arial,
-        Helvetica,
-        sans-serif;
-    text-decoration: none;
-    border-radius: 10%;
-}
 
+#user-data {
+    text-align: center;
+}
 
 /* Authentication styling*/
 #firebaseui-auth-container {
@@ -220,11 +206,19 @@ h2 {
     width: 100%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+
 }
+
+#firebaseui-auth-container button {
+    color: white;
+    background-color: #acccae;
+}
+
 
 .firebaseui-container {
     font-family: var(--font-family);
     font: 16px var(--font-family);
+
 }
 
 .firebaseui-title {
