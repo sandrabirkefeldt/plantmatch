@@ -1,6 +1,7 @@
 "use strict";
 
 // SWIPE SIDEN
+// Carousel håndtere animationer og at man kan swipe mellem planterne
 import Carousel from "./carousel.js";
 
 let board = document.querySelector("#board");
@@ -13,6 +14,7 @@ let _plants = [];
 //Tilføjer de liket planter til ens favorit ved hjælp af et array
 let _favorits = [];
 
+// Henter alt vores data om de forskellige planter fra Wordpress ved hjælp af en API
 async function getPlants() {
   let response = await fetch("http://sandrabirkefeldt.dk/wordpress/wp-json/wp/v2/posts");
   let data = await response.json();
@@ -55,7 +57,7 @@ window.showFavorit = function (id) {
   showFavorit(id);
 }
 
-// Henter ID'et fra den liket plante og kalder på funktionen forneden
+// Henter ID'et fra den liket plante og når plante ID er = ID fra den liket plante returnerer den planten
 function findFavorit(id) {
   for (const plant of _plants) {
     if (plant.id == id) {
@@ -109,5 +111,5 @@ function showFavorit(id) {
     </div>
   `;
   document.querySelector('#plant-information').innerHTML = template;
-  navigateTo("plant-information"); // Tilføjer template til HTML med innerHTML, og guider videre til den enkelte side
+  navigateTo("plant-information"); // Tilføjer vores template til HTML med innerHTML, og guider videre til den enkelte side for hver plante
 }

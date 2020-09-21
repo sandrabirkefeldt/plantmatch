@@ -63,7 +63,6 @@ function hideTabbar(hide) {
 // sign out user
 function logout() {
     firebase.auth().signOut();
-    console.log()
     showPage('login'); // Ved log ud bliver man sendt tilbage til login siden
 
 }
