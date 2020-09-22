@@ -87,7 +87,7 @@ function showFavorit(id) {
   <header class="topbar">
     <div class="topbar-top">
       <a href="#favoritter" class="fa" style="font-size: 50px; color: black; text-decoration: none; padding-left: 10px;">&#xf104;</a>
-     <img id="logo" style="width: 80px;" src="img/logo-hvid.png" alt="Logo i hvid">
+     <img id="logo" style="width: 80px; height: 100%;" src="img/logo-hvid.png" alt="Logo i hvid">
     
 </div>
 
