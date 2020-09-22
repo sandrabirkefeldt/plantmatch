@@ -31,6 +31,7 @@ function appendPlants(plants) {
     <article>
       <h2>${plant.title.rendered}</h2>
       <img src="${plant.acf.image_1.url}">
+      <img src="${plant.acf.kort_info_image.url}">
   </article>
     `;
     carousel.push(template, plant.id);
