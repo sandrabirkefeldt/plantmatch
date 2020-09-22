@@ -142,21 +142,23 @@ button {
     text-decoration: underline;
 }
 
+
 .mini-info {
-    display: flex;
-    flex-direction: row;
-    color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
 }
 
 .mini-info-p {
-    margin: 10px;
-    padding: 10px;
+    grid-area: 1/1/2/2;
 }
 
-.mini-info img {
-    width: 40%;
-    margin-right: 10px;
+.mini-info img{
+    grid-area: 1/2/2/3;
+    width: 100%;
 }
+
+
 
 .plante-container img {
     width: 100%;
